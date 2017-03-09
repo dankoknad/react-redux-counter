@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css';
-import logoReact from '../logo-react.svg'
-import logoRedux from '../logo-redux.png'
-import logoBootstrap from '../logo-bootstrap.png'
 
 class Counter extends Component {
   static propTypes = {
@@ -49,13 +47,7 @@ class Counter extends Component {
                 <span title="reset increment" className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
               </button>
             </p>  
-            <p>Powered by:</p>
-            <p>
-              <img width="50" src={logoReact} alt="..." title="React" /> + 
-              <img width="50" src={logoRedux} alt="..." title="Redux" />+ &nbsp;
-              <img width="40" src={logoBootstrap} alt="..." title="Bootstrap" />
-            </p>
-            <p>Made with <span style={{fontSize: 18}} className="text-danger">♥</span> by <a href="http://dankoknad.github.io/" target="_blank">Danko</a></p>
+            <Footer />
           </div>
         </div>
       </div>
