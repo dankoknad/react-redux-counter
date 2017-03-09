@@ -1,6 +1,6 @@
 const initState = {
   result: 0,
-  increment: 1
+  increment: 5
 }
 
 export default (state = initState, action) => {
@@ -28,7 +28,7 @@ export default (state = initState, action) => {
     case 'RESET_INCREMENT':
       return {
         ...state,
-         increment: 1
+         increment: 5
       }
     default:
       return state

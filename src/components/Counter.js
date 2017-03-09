@@ -10,18 +10,20 @@ class Counter extends Component {
     value: PropTypes.object.isRequired,
     onIncrement: PropTypes.func.isRequired,
     onDecrement: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChangeIncrement: PropTypes.func.isRequired,
+    onResetCounter: PropTypes.func.isRequired,
+    onResetIncrement: PropTypes.func.isRequired
   }
 
   render() {
-    const { value, onIncrement, onDecrement, onChange, onResetCounter, onResetIncrement } = this.props
+    const { value, onIncrement, onDecrement, onChangeIncrement, onResetCounter, onResetIncrement } = this.props
     return (
       <div className="row text-center">
         <div className="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 panel panel-default">
           <div className="">
-            <h1>React/Redux counter</h1>
-            <h2>Result:</h2>
-            <p className="well">{value.result}</p>
+            <h2>React/Redux counter</h2>
+            <h3>Result:</h3>
+            <span className="result">{value.result}</span>
             <p>
               <button className="btn btn-primary" onClick={onIncrement}>
                 + {value.increment}
@@ -30,21 +32,21 @@ class Counter extends Component {
               <button className="btn btn-primary" onClick={onDecrement}>
                 - {value.increment}
               </button>
+              {' '}
+              <button title="reset result" className="btn btn-danger" onClick={onResetCounter}>
+                <span className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+              </button>
             </p>
             <p>
-              <button className="btn btn-danger" onClick={onResetCounter}>
-                Reset result
-              </button>
             </p>  
             <p>You can change increment/decrement value:</p>
             <p>
               <input className="form-control text-center" type="number" value={value.increment} onChange={e => {
-                onChange(Number(e.target.value))
+                onChangeIncrement(Number(e.target.value))
               }} />
-            </p>  
-            <p>  
+              {' '}
               <button className="btn btn-danger" onClick={onResetIncrement}>
-                Reset increment
+                <span title="reset increment" className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
               </button>
             </p>  
             <p>Powered by:</p>

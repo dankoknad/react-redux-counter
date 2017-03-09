@@ -16,7 +16,7 @@ const render = () => ReactDOM.render(
     value={store.getState()}
     onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
     onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
-    onChange={(increment) => store.dispatch({ type: 'CHANGE_INCREMENT', increment })}
+    onChangeIncrement={(increment) => store.dispatch({ type: 'CHANGE_INCREMENT', increment })}
     onResetCounter={() => store.dispatch({ type: 'RESET_COUNTER' })}
     onResetIncrement={() => store.dispatch({ type: 'RESET_INCREMENT' })}
   />,
