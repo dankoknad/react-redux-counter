@@ -28,3 +28,16 @@ body {
     width: auto;
     height: 42px;
 }
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons-row {
+    margin-bottom: 40px;
+}
+
+.footer {
+    margin-top: 40px;
+}
