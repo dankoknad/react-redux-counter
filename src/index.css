@@ -11,6 +11,10 @@ body {
     }
 }
 
+.panel-default {
+    padding-top: 10px;
+}
+
 .result {
     display: inline-block;
     min-width: 100px;
