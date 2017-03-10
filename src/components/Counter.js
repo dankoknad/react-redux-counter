@@ -19,7 +19,7 @@ class Counter extends Component {
       <div className="row text-center">
         <div className="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 panel panel-default">
           <div className="">
-            <h3>React/Redux counter</h3>
+            <h3>React / Redux counter</h3>
             <span className="result">{value.result}</span>
             <div className="buttons-row">
               <button className="btn btn-primary" onClick={onIncrement}>
@@ -34,7 +34,7 @@ class Counter extends Component {
                 <span className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
               </button>
             </div>
-            <h4>You can change increment/decrement value:</h4>
+            <h4>You can change increment&nbsp;/&nbsp;decrement value:</h4>
             <div>
               <input className="form-control text-center" type="number" value={value.increment} onChange={e => {
                 onChangeIncrement(Number(e.target.value))
@@ -43,6 +43,7 @@ class Counter extends Component {
               <button className="btn btn-danger" onClick={onResetIncrement}>
                 <span title="reset increment" className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
               </button>
+              <div className="text-muted"><small>(default = 5)</small></div>
             </div>  
             <Footer />
           </div>
